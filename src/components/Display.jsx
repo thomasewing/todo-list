@@ -27,15 +27,19 @@ const Display = (props)=>{
                 todoList.map((a,idx)=>{
                     return (
                         <div key={idx}>
+                            <div>
                             <p>Todo: {a.todo}</p>
+                            <p>Completed: 
                             <input type='checkbox' name="completed"
                             checked={a.completed} onChange={() =>
                             toggleCheckbox(a)}/>
-                            {
+                            {/* {
                                 a.completed?
                                 <p>completed</p>:
                                 null
-                            }
+                            } */}
+                            </p>
+                            </div>
                             <button onClick={()=> deleteTodoItem(a)}>
                                 Delete</button>
                         </div>
